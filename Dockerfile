@@ -2,10 +2,7 @@ FROM ubuntu:14.04
 #Change timezone.
 RUN ln -snf /usr/share/zoneinfo/America/Recife /etc/localtime && echo "America/Recife" > /etc/timezone
 #Add cron job to cleanup logs every half month.
-ADD crontab /etc/cron.d/syslog-cleanup-cron
-RUN chmod 0644 /etc/cron.d/syslog-cleanup-cron
-RUN touch /var/log/cron.log
-RUN cron
+RUN echo "0 4 */15 * * root echo "" > /var/log/net/syslog.log  >/dev/null 2>&1" >> /etc/crontab
 
 RUN apt-get update \
     && apt-get install -y git net-tools vim nginx rsyslog supervisor php5-fpm php5-cli apache2-utils\
