@@ -75,24 +75,22 @@
 			"max"     : 20,
 			"notify"  : false,
 			"format"  : {
-				"regex": "|([0-9]{1,2}\/[0-2]{1,2}\/[0-9]{1,4}) ([0-9]{1,2}:[0-9]{1,2}) (.*?) (.*?) (.*?)$|",
+				"regex": "|([0-9]{1,2}\/[0-2]{1,2}\/[0-9]{1,4}) ([0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}.[0-9]{1,3}) (.*?) (.*?) (.*?)$|",
 				"match": {
-					"Data"    : 1,
-					"Hora"    : 2,
-					"Origem"  	  : 3,
-					"Tipo"   : 4,
-					"Mensagem" : 5
+					"Date"    : 1,
+					"Time"    : 2,
+					"IP"  	  : 3,
+					"Log Level"   : 4,
+					"Message" : 5
 				},
 				"types": {
-					"Data"    : "txt",
-					"Hora"    : "txt",
-					"Origem": "txt",
-					"Tipo"      : "txt",
-					"Mensagem" : "txt"
+					"Date"    : "txt",
+					"Time"    : "txt",
+					"Log Level": "txt",
+					"IP"      : "txt",
+					"Message" : "txt"
 				}
 			}
 		}
 	}
 }
-
-18/11/2018 16:26:52.181
