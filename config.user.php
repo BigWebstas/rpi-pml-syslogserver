@@ -35,8 +35,8 @@
 		"_remove_me_to_set_TAG_DISPLAY_LOG_FILES_COUNT" : true,
 		"_remove_me_to_set_TAG_NOT_TAGGED_FILES_ON_TOP" : true,
 		"_remove_me_to_set_TAG_SORT_TAG"                : "default | display-asc | display-insensitive | display-desc | display-insensitive-desc",
-		"TITLE"                       : "Servidor de Logs - UFCG",
-		"_remove_me_to_set_TITLE_FILE"                  : "Pimp my Log [%f]",
+		"TITLE"                                         : "Servidor de Logs - UFCG",
+		"TITLE_FILE"                                    : "Servidor de Logs - UFCG",
 		"_remove_me_to_set_UPGRADE_MANUALLY_URL"        : "http:\/\/pimpmylog.com\/getting-started\/#update",
 		"_remove_me_to_set_USER_CONFIGURATION_DIR"      : "config.user.d",
 		"USER_TIME_ZONE"              : "America\/Recife"
