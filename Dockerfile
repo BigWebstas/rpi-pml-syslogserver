@@ -1,4 +1,4 @@
-FROM 32bit/ubuntu:14.04
+FROM ubuntu:14.04
 #Change timezone.
 RUN ln -snf /usr/share/zoneinfo/America/Recife /etc/localtime && echo "America/Recife" > /etc/timezone
 #Add cron job to cleanup logs every half month.
