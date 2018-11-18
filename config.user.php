@@ -77,18 +77,18 @@
 			"format"  : {
 				"regex": "|([0-9]{1,2}\/[0-2]{1,2}\/[0-9]{1,4}) ([0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2})(.[0-9]{1,3}) (.*?) (.*?) (.*?)$|",
 				"match": {
-					"Data (DD/MM/AAAA)"    : 1,
-					"Horário (HH:MM:SS)"    : 2,
-					"Origem"  	  : 4,
-					"Tipo"   : 5,
-					"Mensagem" : 6
+					"Data da Entrega"       : 1,
+					"Horário da Entrega"    : 2,
+					"Origem do Relatório"  	: 4,
+					"Nível do Relatório"    : 5,
+					"Mensagem Enviada"      : 6
 				},
 				"types": {
-					"Data (DD/MM/AAAA)"    : "txt",
-					"Horário (HH:MM:SS)"    : "txt",
-					"Origem": "txt",
-					"Tipo"      : "txt",
-					"Mensagem" : "txt"
+					"Data da Entrega"       : "date:d/m/Y/20",
+					"Horário da Entrega"    : "date:H:i:s",
+					"Origem do Relatório"   : "txt",
+					"Nível do Relatório"    : "txt",
+					"Mensagem Enviada"      : "txt"
 				}
 			}
 		}
