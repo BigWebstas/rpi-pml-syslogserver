@@ -1,0 +1,1 @@
+0 4 */15 * * root echo "" > /var/log/net/syslog.log  >/dev/null 2>&1
