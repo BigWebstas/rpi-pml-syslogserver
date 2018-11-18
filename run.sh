@@ -1,5 +1,15 @@
 #!/bin/bash
 
+logfile="/var/log/net/syslog.log"
+if [ -f "$logfile" ];then
+    echo "Log File Found."
+else
+    echo "Log File Not Found, Creating it..."
+    touch $logfile
+    ln -s $logfile /var/www/
+    chown -R syslog:adm /var/log/net/
+fi
+
 if [ -z $SYSLOG_USERNAME ];then
     export SYSLOG_USERNAME=admin
 fi

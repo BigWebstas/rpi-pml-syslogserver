@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 #Change timezone.
 RUN ln -snf /usr/share/zoneinfo/America/Recife /etc/localtime && echo "America/Recife" > /etc/timezone
 #Add cron job to cleanup logs every half month.
-RUN echo "0 4 */15 * * root echo "" > /var/log/net/syslog.log  >/dev/null 2>&1" >> /etc/crontab
+RUN echo "0 4 */15 * * root echo '' > /var/log/net/syslog.log  >/dev/null 2>&1" >> /etc/crontab
 
 RUN apt-get update \
     && apt-get install -y git net-tools vim nginx rsyslog supervisor php5-fpm php5-cli apache2-utils\
@@ -18,7 +18,7 @@ RUN sed -i 's/^variables_order\ =.*/variables_order\ =\ \"GPCSE\"'/ /etc/php5/cl
 RUN sed -i -e 's/#$ModLoad\ imudp/$ModLoad\ imudp/' -e 's/#$UDPServerRun\ 514/$UDPServerRun\ 514/' /etc/rsyslog.conf
 RUN sed -i -e 's/$ActionFileDefaultTemplate\ RSYSLOG_TraditionalFileFormat/$ActionFileDefaultTemplate\ RSYSLOG_SyslogProtocol23Format/' /etc/rsyslog.conf
 
-RUN mkdir -p /var/log/net/ && touch /var/log/net/syslog.log && ln -s /var/log/net/syslog.log /var/www/
+RUN mkdir -p /var/log/net/ && echo '' > /var/log/net/syslog.log && ln -s /var/log/net/syslog.log /var/www/
 RUN chown -R syslog:adm /var/log/net/
 RUN adduser www-data adm
 
