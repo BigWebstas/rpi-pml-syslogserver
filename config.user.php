@@ -77,13 +77,13 @@
 			"format"  : {
 				"regex": "|([0-9]{1,2}\/[0-2]{1,2}\/[0-9]{1,4} [0-9]{1,2}:[0-9]{1,2}) (.*?) (.*?) (.*?)$|",
 				"match": {
-					"Data_Horario"    : 1,
+					"Data e Horário"  : 1,
 					"Origem"  	      : 2,
 					"Tipo"            : 3,
 					"Mensagem"        : 4
 				},
 				"types": {
-					"Data_Horario"   : "date: d/m/Y H:i/30",
+					"Data e Horário" : "txt",
 					"Origem"         : "txt",
 					"Tipo"           : "txt",
 					"Mensagem"       : "txt"
