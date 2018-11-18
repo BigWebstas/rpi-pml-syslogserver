@@ -79,14 +79,12 @@
 				"match": {
 					"Data da Entrega"       : 1,
 					"Horário da Entrega"    : 2,
-					"Origem do Relatório"  	: 4,
 					"Nível do Relatório"    : 5,
 					"Mensagem Enviada"      : 6
 				},
 				"types": {
-					"Data da Entrega"       : "date:d/m/Y/100",
+					"Data da Entrega"       : "txt",
 					"Horário da Entrega"    : "date:H:i:s",
-					"Origem do Relatório"   : "txt",
 					"Nível do Relatório"    : "txt",
 					"Mensagem Enviada"      : "txt"
 				}
