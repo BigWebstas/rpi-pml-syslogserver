@@ -77,18 +77,18 @@
 			"format"  : {
 				"regex": "|([0-9]{1,2}\/[0-2]{1,2}\/[0-9]{1,4}) ([0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}.[0-9]{1,3}) (.*?) (.*?) (.*?)$|",
 				"match": {
-					"Date"    : 1,
-					"Time"    : 2,
-					"IP"  	  : 3,
-					"Log Level"   : 4,
-					"Message" : 5
+					"Data"    : 1,
+					"Hora"    : 2,
+					"Origem"  	  : 3,
+					"Tipo"   : 4,
+					"Mensagem" : 5
 				},
 				"types": {
-					"Date"    : "txt",
-					"Time"    : "txt",
-					"Log Level": "txt",
-					"IP"      : "txt",
-					"Message" : "txt"
+					"Data"    : "txt",
+					"Hora"    : "txt",
+					"Origem": "txt",
+					"Tipo"      : "txt",
+					"Mensagem" : "txt"
 				}
 			}
 		}
