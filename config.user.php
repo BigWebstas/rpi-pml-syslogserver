@@ -75,18 +75,20 @@
 			"max"     : 20,
 			"notify"  : false,
 			"format"  : {
-				"regex": "|([0-9]{1,2}\/[0-2]{1,2}\/[0-9]{1,4} [0-9]{1,2}:[0-9]{1,2}) (.*?) (.*?) (.*?)$|",
+				"regex": "|([0-9]{1,2}\/[0-2]{1,2}\/[0-9]{1,4}) ([0-9]{1,2}:[0-9]{1,2}) (.*?) (.*?) (.*?)$|",
 				"match": {
-					"Data e Horário"  : 1,
-					"Origem"  	      : 2,
-					"Tipo"            : 3,
-					"Mensagem"        : 4
+					"Data"    : 1,
+					"Hora"    : 2,
+					"Origem"  	  : 3,
+					"Tipo"   : 4,
+					"Mensagem" : 5
 				},
 				"types": {
-					"Data e Horário" : "txt",
-					"Origem"         : "txt",
-					"Tipo"           : "txt",
-					"Mensagem"       : "txt"
+					"Data"    : "txt",
+					"Hora"    : "txt",
+					"Origem": "txt",
+					"Tipo"      : "txt",
+					"Mensagem" : "txt"
 				}
 			}
 		}
