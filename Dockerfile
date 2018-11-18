@@ -5,7 +5,7 @@ RUN ln -snf /usr/share/zoneinfo/America/Recife /etc/localtime && echo "America/R
 ADD crontab /etc/cron.d/syslog-cleanup-cron
 RUN chmod 0644 /etc/cron.d/syslog-cleanup-cron
 RUN touch /var/log/cron.log
-RUN cron && tail -f /var/log/cron.log
+RUN cron
 
 RUN apt-get update \
     && apt-get install -y git net-tools vim nginx rsyslog supervisor php5-fpm php5-cli apache2-utils\
