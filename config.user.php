@@ -84,10 +84,10 @@
 					"Message" : 5
 				},
 				"types": {
-					"Date"    : "txt",
-					"Time"    : "txt",
-					"Log Level": "txt",
-					"IP"      : "txt",
+					"Date"    : "txt/10",
+					"Time"    : "txt/12",
+					"Log Level": "txt/12",
+					"IP"      : "txt/10",
 					"Message" : "txt"
 				}
 			}
