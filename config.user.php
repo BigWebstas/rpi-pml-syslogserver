@@ -84,7 +84,7 @@
 					"Mensagem Enviada"      : 6
 				},
 				"types": {
-					"Data da Entrega"       : "date:d/m/Y/20",
+					"Data da Entrega"       : "date:d/m/Y/100",
 					"Horário da Entrega"    : "date:H:i:s",
 					"Origem do Relatório"   : "txt",
 					"Nível do Relatório"    : "txt",
