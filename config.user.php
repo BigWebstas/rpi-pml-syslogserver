@@ -16,7 +16,7 @@
 		"CHECK_UPGRADE"                                 : false,
 		"_remove_me_to_set_EXPORT"                      : true,
 		"_remove_me_to_set_FILE_SELECTOR"               : "bs",
-		"FOOTER"                      : "PimpMyLogs",
+		"FOOTER"                                        : "Servidor de Logs - UFCG",
 		"_remove_me_to_set_FORGOTTEN_YOUR_PASSWORD_URL" : "http:\/\/support.pimpmylog.com\/kb\/misc\/forgotten-your-password",
 		"_remove_me_to_set_GEOIP_URL"                   : "http:\/\/www.geoiptool.com\/en\/?IP=%p",
 		"_remove_me_to_set_GOOGLE_ANALYTICS"            : "UA-XXXXX-X",
@@ -69,7 +69,7 @@
 
 	"files": {
 		"syslog": {
-			"display" : "Syslog",
+			"display" : "Serviços Internos",
 			"path"    : "/var/log/net/syslog.log",
 			"refresh" : 20,
 			"max"     : 20,
