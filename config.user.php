@@ -84,7 +84,7 @@
 				},
 				"types": {
 					"Data da Entrega"       : "txt",
-					"Horário da Entrega"    : "date:H:i:s",
+					"Horário da Entrega"    : "txt",
 					"Nível do Relatório"    : "txt",
 					"Mensagem Enviada"      : "txt"
 				}
