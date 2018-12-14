@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 RUN ln -snf /usr/share/zoneinfo/America/Recife /etc/localtime && echo "America/Recife" > /etc/timezone
 
 RUN apt-get update \
-    && apt-get install -y git net-tools vim nginx rsyslog supervisor php5-fpm php5-cli apache2-utils\
+    && apt-get install -y git net-tools vim nginx rsyslog supervisor php5-fpm php5-cli apache2-utils wget\
     && rm -rf /var/lib/apt/lists/*
 
 RUN sed -i -e 's/listen\ =\ 127.0.0.1:9000/listen\ =\ \/var\/run\/php5-fpm.sock/' /etc/php5/fpm/pool.d/www.conf
@@ -19,7 +19,7 @@ RUN sed -i -e 's/$ActionFileDefaultTemplate\ RSYSLOG_TraditionalFileFormat/$Acti
 RUN adduser www-data adm
 
 #Add cron job to cleanup logs every half month.
-RUN mkdir -p /etc/cleanup && echo "* * * * * root echo '' > /var/log/net/syslog.log" > /etc/cleanup/cron
+RUN mkdir -p /etc/cleanup && echo "* * * * * root /bin/echo '' > /var/log/net/syslog.log" > /etc/cleanup/cron
 RUN wget -O /usr/bin/go-crond https://github.com/webdevops/go-crond/releases/download/0.6.1/go-crond-64-linux && chmod +x /usr/bin/go-crond
 
 COPY nginx-default /etc/nginx/sites-enabled/default
