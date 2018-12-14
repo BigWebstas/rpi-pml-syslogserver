@@ -19,7 +19,7 @@ RUN sed -i -e 's/$ActionFileDefaultTemplate\ RSYSLOG_TraditionalFileFormat/$Acti
 RUN adduser www-data adm
 
 #Add cron job to cleanup logs every half month.
-RUN echo '* * * * * root /bin/bash -c "> /var/log/net/syslog.log"' > /etc/cron.d/cleanup
+RUN echo '0 4 */15 * * root /bin/bash -c "> /var/log/net/syslog.log"' > /etc/cron.d/cleanup
 
 COPY nginx-default /etc/nginx/sites-enabled/default
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
