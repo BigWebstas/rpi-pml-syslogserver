@@ -1,8 +1,6 @@
 FROM ubuntu:14.04
 #Change timezone.
 RUN ln -snf /usr/share/zoneinfo/America/Recife /etc/localtime && echo "America/Recife" > /etc/timezone
-#Add cron job to cleanup logs every half month.
-RUN echo "0 4 */15 * * root echo '' > /var/log/net/syslog.log  >/dev/null 2>&1" >> /etc/crontab
 
 RUN apt-get update \
     && apt-get install -y git net-tools vim nginx rsyslog supervisor php5-fpm php5-cli apache2-utils\
@@ -19,6 +17,10 @@ RUN sed -i -e 's/#$ModLoad\ imudp/$ModLoad\ imudp/' -e 's/#$UDPServerRun\ 514/$U
 RUN sed -i -e 's/$ActionFileDefaultTemplate\ RSYSLOG_TraditionalFileFormat/$ActionFileDefaultTemplate\ RSYSLOG_SyslogProtocol23Format/' /etc/rsyslog.conf
 
 RUN adduser www-data adm
+
+#Add cron job to cleanup logs every half month.
+RUN mkdir -p /etc/cleanup
+COPY cleanup-cron /etc/cleanup/cron
 
 COPY nginx-default /etc/nginx/sites-enabled/default
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
