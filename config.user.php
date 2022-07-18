@@ -21,11 +21,11 @@
 		"_remove_me_to_set_GEOIP_URL"                   : "http:\/\/www.geoiptool.com\/en\/?IP=%p",
 		"_remove_me_to_set_GOOGLE_ANALYTICS"            : "UA-XXXXX-X",
 		"_remove_me_to_set_HELP_URL"                    : "http:\/\/pimpmylog.com",
-		"_remove_me_to_set_LOCALE"                      : "gb_GB",
+		"_remove_me_to_set_LOCALE"                      : "en_US",
 		"_remove_me_to_set_LOGS_MAX"                    : 50,
 		"_remove_me_to_set_LOGS_REFRESH"                : 0,
 		"_remove_me_to_set_MAX_SEARCH_LOG_TIME"         : 5,
-		"_remove_me_to_set_NAV_TITLE"                   : "",
+		"_remove_me_to_set_NAV_TITLE"                   : "Syslog-Server",
 		"_remove_me_to_set_NOTIFICATION"                : true,
 		"_remove_me_to_set_NOTIFICATION_TITLE"          : "New logs [%f]",
 		"_remove_me_to_set_PIMPMYLOG_ISSUE_LINK"        : "https:\/\/github.com\/potsky\/PimpMyLog\/issues\/",
@@ -39,7 +39,7 @@
 		"_remove_me_to_set_TITLE_FILE"                  : "Pimp my Log [%f]",
 		"_remove_me_to_set_UPGRADE_MANUALLY_URL"        : "http:\/\/pimpmylog.com\/getting-started\/#update",
 		"_remove_me_to_set_USER_CONFIGURATION_DIR"      : "config.user.d",
-		"_remove_me_to_set_USER_TIME_ZONE"              : "Europe\/Paris"
+		"_remove_me_to_set_USER_TIME_ZONE"              : "America\/Denver"
 	},
 
 	"badges": {
@@ -75,7 +75,7 @@
 			"max"     : 20,
 			"notify"  : false,
 			"format"  : {
-				"regex": "|([0-9]{1,2}-.*-[0-9]{1,4} [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}.[0-9]{1,3}) (.*?) (.*?) (.*?)$|",
+				"regex": "|([0-9]{1,2}/.*/[0-9]{1,4} [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}.[0-9]{1,3}) (.*?) (.*?) (.*?)$|",
 				"match": {
 					"Date"    : 1,
 					"Time"    : 1,
