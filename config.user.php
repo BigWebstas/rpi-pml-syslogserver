@@ -13,19 +13,19 @@
 	"globals": {
 		"_remove_me_to_set_AUTH_LOG_FILE_COUNT"         : 100,
 		"_remove_me_to_set_AUTO_UPGRADE"                : false,
-		"CHECK_UPGRADE"                                 : false,
+		"_remove_me_to_set_CHECK_UPGRADE"               : true,
 		"_remove_me_to_set_EXPORT"                      : true,
 		"_remove_me_to_set_FILE_SELECTOR"               : "bs",
-		"FOOTER"                                        : "Servidor de Logs - UFCG",
+		"FOOTER"                      : "PimpMyLogs",
 		"_remove_me_to_set_FORGOTTEN_YOUR_PASSWORD_URL" : "http:\/\/support.pimpmylog.com\/kb\/misc\/forgotten-your-password",
 		"_remove_me_to_set_GEOIP_URL"                   : "http:\/\/www.geoiptool.com\/en\/?IP=%p",
 		"_remove_me_to_set_GOOGLE_ANALYTICS"            : "UA-XXXXX-X",
 		"_remove_me_to_set_HELP_URL"                    : "http:\/\/pimpmylog.com",
-		"LOCALE"                                        : "pt_BR",
+		"_remove_me_to_set_LOCALE"                      : "gb_GB",
 		"_remove_me_to_set_LOGS_MAX"                    : 50,
 		"_remove_me_to_set_LOGS_REFRESH"                : 0,
 		"_remove_me_to_set_MAX_SEARCH_LOG_TIME"         : 5,
-		"NAV_TITLE"                                     : "Servidor de Logs - UFCG",
+		"_remove_me_to_set_NAV_TITLE"                   : "",
 		"_remove_me_to_set_NOTIFICATION"                : true,
 		"_remove_me_to_set_NOTIFICATION_TITLE"          : "New logs [%f]",
 		"_remove_me_to_set_PIMPMYLOG_ISSUE_LINK"        : "https:\/\/github.com\/potsky\/PimpMyLog\/issues\/",
@@ -35,11 +35,11 @@
 		"_remove_me_to_set_TAG_DISPLAY_LOG_FILES_COUNT" : true,
 		"_remove_me_to_set_TAG_NOT_TAGGED_FILES_ON_TOP" : true,
 		"_remove_me_to_set_TAG_SORT_TAG"                : "default | display-asc | display-insensitive | display-desc | display-insensitive-desc",
-		"TITLE"                                         : "Servidor de Logs - UFCG",
-		"TITLE_FILE"                                    : "Servidor de Logs - UFCG",
+		"_remove_me_to_set_TITLE"                       : "Pimp my Log",
+		"_remove_me_to_set_TITLE_FILE"                  : "Pimp my Log [%f]",
 		"_remove_me_to_set_UPGRADE_MANUALLY_URL"        : "http:\/\/pimpmylog.com\/getting-started\/#update",
 		"_remove_me_to_set_USER_CONFIGURATION_DIR"      : "config.user.d",
-		"USER_TIME_ZONE"              : "America\/Recife"
+		"_remove_me_to_set_USER_TIME_ZONE"              : "Europe\/Paris"
 	},
 
 	"badges": {
@@ -69,24 +69,26 @@
 
 	"files": {
 		"syslog": {
-			"display" : "Serviços Internos",
+			"display" : "Syslog",
 			"path"    : "/var/log/net/syslog.log",
 			"refresh" : 20,
 			"max"     : 20,
 			"notify"  : false,
 			"format"  : {
-				"regex": "|([0-9]{1,2}\/[0-2]{1,2}\/[0-9]{1,4}) ([0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2})(.[0-9]{1,3}) (.*?) (.*?) (.*?)$|",
+				"regex": "|([0-9]{1,2}-.*-[0-9]{1,4} [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}.[0-9]{1,3}) (.*?) (.*?) (.*?)$|",
 				"match": {
-					"Data da Entrega"       : 1,
-					"Horário da Entrega"    : 2,
-					"Nível do Relatório"    : 5,
-					"Mensagem Enviada"      : 6
+					"Date"    : 1,
+					"Time"    : 1,
+					"IP"  	  : 2,
+					"Log Level"   : 3,
+					"Message" : 4
 				},
 				"types": {
-					"Data da Entrega"       : "txt",
-					"Horário da Entrega"    : "txt",
-					"Nível do Relatório"    : "txt",
-					"Mensagem Enviada"      : "txt"
+					"Date"    : "date:d:M:Y",
+					"Time"    : "date:H:i:s",
+					"Log Level": "txt",
+					"IP"      : "txt",
+					"Message" : "txt"
 				}
 			}
 		}
