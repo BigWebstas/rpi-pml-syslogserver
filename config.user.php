@@ -39,7 +39,7 @@
 		"TITLE_FILE"                  : "Syslog-Server [%f]",
 		"_remove_me_to_set_UPGRADE_MANUALLY_URL"        : "http:\/\/pimpmylog.com\/getting-started\/#update",
 		"_remove_me_to_set_USER_CONFIGURATION_DIR"      : "config.user.d",
-		"_remove_me_to_set_USER_TIME_ZONE"              : "America\/Denver"
+		"USER_TIME_ZONE"              : "America\/Denver"
 	},
 
 	"badges": {
