@@ -1,13 +1,25 @@
-Based on: https://github.com/pbertera/dockerfiles/tree/master/syslogserver
+Based on: https://github.com/andreppedroza/ufcg-syslogserver Which is based on >> https://github.com/pbertera/dockerfiles/tree/master/syslogserver
 
-## Rsyslogd + PimpMyLogs
+## RaspberryPi + Rsyslogd + PimpMyLogs
 
 This container creates a Syslog server with Rsyslogd, logs are accessible via PimpMyLogs interface (http://pimpmylog.com).
 
 PympMylogs credentials are created using the script create-user.php:
 
-`SYSLOG_USERNAME` and `SYSLOG_PASSORD` are used to create credentials.
+```Set env variables(Optional)
+SYSLOG_USERNAME
+SYSLOG_PASSORD
+(if not set the default user is admin and pw is SyslogP4ss)
+
+Networking (Mandatory)
+Set ports UDP 514  ->> 515
+Set ports TCP 80   ->> 80
+
+Map volumes (Optional)
+/var/log/net/ --> /local/storage
+```
 
 You can run the container with:
 
-    docker run -it -e SYSLOG_USERNAME=admin -e SYSLOG_PASSWORD=1234 -p 8080:80 -p 514:514/udp -v /host/path:/var/log/net/syslog.log andreppc/ufcg-syslogserver
+    docker run -it -e SYSLOG_USERNAME=admin -e SYSLOG_PASSWORD=1234 -p 8080:80 -p 514:515/udp -v /host/path:/var/log/net/syslog.log BigWebstas/rpi-pml-syslogserver
+
