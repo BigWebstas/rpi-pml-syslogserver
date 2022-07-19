@@ -7,8 +7,8 @@ This container creates a Syslog server with Rsyslogd, logs are accessible via Pi
 PympMylogs credentials are created using the script create-user.php:
 
 ```Set env variables(Optional)
-SYSLOG_USERNAME
-SYSLOG_PASSORD
+SYSLOG_USERNAME  ->> User
+SYSLOG_PASSORD   ->> pw
 (if not set the default user is admin and pw is SyslogP4ss)
 
 Networking (Mandatory)
