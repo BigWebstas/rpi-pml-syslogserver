@@ -29,8 +29,8 @@
 		"_remove_me_to_set_NOTIFICATION"                : true,
 		"_remove_me_to_set_NOTIFICATION_TITLE"          : "New logs [%f]",
 		"_remove_me_to_set_PIMPMYLOG_ISSUE_LINK"        : "https:\/\/github.com\/potsky\/PimpMyLog\/issues\/",
-		"_remove_me_to_set_PIMPMYLOG_VERSION_URL"       : "http:\/\/demo.pimpmylog.com\/version.js",
-		"_remove_me_to_set_PULL_TO_REFRESH"             : true,
+		"PIMPMYLOG_VERSION_URL"       : "https:\/\/raw.githubusercontent.com\/potsky\/PimpMyLog\/master\/version.js",
+		"PULL_TO_REFRESH"             : true,
 		"_remove_me_to_set_SORT_LOG_FILES"              : "default",
 		"_remove_me_to_set_TAG_DISPLAY_LOG_FILES_COUNT" : true,
 		"_remove_me_to_set_TAG_NOT_TAGGED_FILES_ON_TOP" : true,
@@ -50,13 +50,14 @@
 			"Notice"      : "info",
 			"warn"        : "warning",
 			"error"       : "danger",
+                        "err"         : "danger", 
 			"crit"        : "danger",
 			"alert"       : "danger",
 			"emerg"       : "danger",
 			"Notice"      : "info",
 			"fatal error" : "danger",
 			"parse error" : "danger",
-			"Warning"     : "warning"
+			"warning"     : "warning"
 		},
 		"http": {
 			"1" : "info",
@@ -69,7 +70,7 @@
 
 	"files": {
 		"syslog": {
-			"display" : "Network-input",
+			"display" : "Network-Logs",
 			"path"    : "/var/log/net/syslog.log",
 			"refresh" : 20,
 			"max"     : 20,
@@ -84,10 +85,10 @@
 					"Message" : 4
 				},
 				"types": {
-					"Date"    : "date:M:d:Y",
+					"Date"    : "date:M-d-Y",
 					"Time"    : "date:H:i:s",
-					"Log Level": "txt",
-					"IP"      : "txt",
+					"Log Level": "badge:severity",
+					"IP"      : "ip:http",
 					"Message" : "txt"
 				}
 			}
