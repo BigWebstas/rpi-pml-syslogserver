@@ -21,11 +21,11 @@
 		"_remove_me_to_set_GEOIP_URL"                   : "http:\/\/www.geoiptool.com\/en\/?IP=%p",
 		"_remove_me_to_set_GOOGLE_ANALYTICS"            : "UA-XXXXX-X",
 		"_remove_me_to_set_HELP_URL"                    : "http:\/\/pimpmylog.com",
-		"_remove_me_to_set_LOCALE"                      : "en_US",
+		"LOCALE"                      : "en_US",
 		"_remove_me_to_set_LOGS_MAX"                    : 50,
 		"_remove_me_to_set_LOGS_REFRESH"                : 0,
 		"_remove_me_to_set_MAX_SEARCH_LOG_TIME"         : 5,
-		"_remove_me_to_set_NAV_TITLE"                   : "Syslog-Server",
+		"NAV_TITLE"                   : "Syslog-Server",
 		"_remove_me_to_set_NOTIFICATION"                : true,
 		"_remove_me_to_set_NOTIFICATION_TITLE"          : "New logs [%f]",
 		"_remove_me_to_set_PIMPMYLOG_ISSUE_LINK"        : "https:\/\/github.com\/potsky\/PimpMyLog\/issues\/",
@@ -35,8 +35,8 @@
 		"_remove_me_to_set_TAG_DISPLAY_LOG_FILES_COUNT" : true,
 		"_remove_me_to_set_TAG_NOT_TAGGED_FILES_ON_TOP" : true,
 		"_remove_me_to_set_TAG_SORT_TAG"                : "default | display-asc | display-insensitive | display-desc | display-insensitive-desc",
-		"_remove_me_to_set_TITLE"                       : "Pimp my Log",
-		"_remove_me_to_set_TITLE_FILE"                  : "Pimp my Log [%f]",
+		"TITLE"                       : "Syslog-Server",
+		"TITLE_FILE"                  : "Syslog-Server [%f]",
 		"_remove_me_to_set_UPGRADE_MANUALLY_URL"        : "http:\/\/pimpmylog.com\/getting-started\/#update",
 		"_remove_me_to_set_USER_CONFIGURATION_DIR"      : "config.user.d",
 		"_remove_me_to_set_USER_TIME_ZONE"              : "America\/Denver"
@@ -69,13 +69,13 @@
 
 	"files": {
 		"syslog": {
-			"display" : "Syslog",
+			"display" : "Network-input",
 			"path"    : "/var/log/net/syslog.log",
 			"refresh" : 20,
 			"max"     : 20,
 			"notify"  : false,
 			"format"  : {
-				"regex": "|([0-9]{1,2}/.*/[0-9]{1,4} [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}.[0-9]{1,3}) (.*?) (.*?) (.*?)$|",
+				"regex": "|([0-9]{1,2}-.*-[0-9]{1,4} [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}.[0-9]{1,3}) (.*?) (.*?) (.*?)$|",
 				"match": {
 					"Date"    : 1,
 					"Time"    : 1,
@@ -84,7 +84,7 @@
 					"Message" : 4
 				},
 				"types": {
-					"Date"    : "date:d:M:Y",
+					"Date"    : "date:M:d:Y",
 					"Time"    : "date:H:i:s",
 					"Log Level": "txt",
 					"IP"      : "txt",
